@@ -65,3 +65,9 @@ function copyCart(){ // nukopijuoja shopping carta. gal nereikalinga
 	}
 	return cartCopy;
 }
+function saveCart() {
+	localStorage.setItem("shoppingCart", JSON.stringify(cart)); // JS object notation
+}
+function loadCart(){
+	cart = JSON.parse(localStorage.getItem("shoppingCart"));
+}
