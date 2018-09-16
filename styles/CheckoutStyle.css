@@ -1,0 +1,28 @@
+.checkoutForm{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Order{
+  max-width: 50%;
+}
+
+.OrderHeader{
+  border-radius: 3px;
+  border: 2px solid black;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.checkoutList{
+
+}
+
+.Order li{
+  border-radius: 2px;
+  border: 0.5px solid black;
+
+}
