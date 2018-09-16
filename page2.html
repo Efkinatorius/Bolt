@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device width, initial scale=1">
+  <link rel="stylesheet" href="./styles/Reset.css">
+  <link rel = "stylesheet" type="text/css" href="./styles/style1.css">
+  <link rel = "stylesheet" type="text/css" href="./styles/restaurantPageStyle.css">
+</head>
+<body>
+  <header>
+    <div class="header" id="pageHeader">
+      <div>
+        <a href="#default" class="logo"><img class="bolt-logo" src="./pics/bolt-logo.png" alt=""></a>
+      </div>
+      <div>
+        <input class="input" type="text" placeholder="search" id="search"></input>
+      </div>
+      <div class="header-right_container">
+        <ul class="header-right">
+          <li><a href="login.php"  id="log">Log In</a></li>
+
+          <li><a href="signup.php" id="reg">Sign up</a></li>
+
+          <li><select id="sel">
+            <option>English</option>
+            <option>Lithuanian</option>
+            <option>Russian</option>
+            <option>Polish</option>
+          </select></li>
+
+          <li><a href="checkout"><img src="./pics/SHOPPING_CART.svg" id="cart"></a></li>
+          <li><a href="checkout" id="itemCount">0 items</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1 style="font-size:5rem" id="restTitle">Restorano pavadinimas</h1>
+      <p>€€€€</p>
+      <ul id="tags">
+        <li><a href="menu">Kebabai</a></li>
+        <li><a href="menu">Picos</a></li>
+        <li><a href="menu">Yum!</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="overlay-bar">
+    <div class="overlay-text">
+      Gourmet kebabų restoranas subalansuotas draugams,
+      pritaikytas bet kuriam paros metui
+    </div>
+    <div class="overlay-fav">
+    </div>
+  </div>
+
+  <div class="menu">
+    <section class="menuCategoryArea">
+      <div class="menuCategoryHeader">
+        <h1>FOOD</h1>
+      </div>
+      <ul class="menuList">
+        <li class="menuItem">
+          <a class="menuToggle" href role="button">
+            <div class="menuContentContainer">
+              <div class="menuContentArea">
+                <div class="menuRadio">
+                  <input type="checkbox" class="selectionCheckbox" onchange="CountMenu()">
+                </div>
+                <div class="menuContent">
+                  <h2 class="foodname">Kebabas</h2>
+                  <p class="price">2.50 €</p>
+                </div>
+                <div clas="menuContentDescr">
+                  <p>Skanus kebabas</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="menuItem">
+          <a class="menuToggle" href role="button">
+            <div class="menuContentContainer">
+              <div class="menuContentArea">
+                <div class="menuRadio">
+                  <input type="checkbox" class="selectionCheckbox" onchange="CountMenu()">
+                </div>
+                <div class="menuContent">
+                  <h2 class="foodname">Pica</h2>
+                  <p class="price">4.50 €</p>
+                </div>
+                <div clas="menuContentDescr">
+                  <p>Skani Pica</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="menuCategoryArea">
+      <div class="menuCategoryHeader">
+        <h1>DESSERTS</h1>
+      </div>
+      <ul class="menuList">
+        <li class="menuItem">
+          <a class="menuToggle" href role="button">
+            <div class="menuContentContainer">
+              <div class="menuContentArea">
+                <div class="menuRadio">
+                  <input type="checkbox" class="selectionCheckbox" onchange="CountMenu()">
+                </div>
+                <div class="menuContent">
+                  <h2 class="foodname">Kebabas su šokoladu</h2>
+                  <p class="price">6.66 €</p>
+                </div>
+                <div class="menuContentDescr">
+                  <p>Skanus kebabas su šokoladu</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="menuItem">
+          <a class="menuToggle" href role="button">
+            <div class="menuContentContainer">
+              <div class="menuContentArea">
+                <div class="menuRadio">
+                  <input type="checkbox" class="selectionCheckbox" onchange="CountMenu()">
+                </div>
+                <div class="menuContent">
+                  <h2 class="foodname">Ledai</h2>
+                  <p class="price">1.50 €</p>
+                </div>
+                <div class="menuContentDescr">
+                  <p>Skanūs ledai</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="menuCategoryArea">
+      <div class="menuCategoryHeader">
+        <h1>DRINKS</h1>
+      </div>
+      <ul class="menuList">
+        <li class="menuItem">
+          <a class="menuToggle" href role="button">
+            <div class="menuContentContainer">
+              <div class="menuContentArea">
+                <div class="menuRadio">
+                  <input type="checkbox" class="selectionCheckbox" onchange="CountMenu()">
+                </div>
+                <div class="menuContent">
+                  <h2 class="foodname">Kola</h2>
+                  <p class="price">2 €</p>
+                </div>
+                <div class="menuContentDescr">
+                  <p>kola</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="menuItem">
+          <a class="menuToggle" href role="button">
+            <div class="menuContentContainer">
+              <div class="menuContentArea">
+                <div class="menuRadio">
+                  <input type="checkbox" class="selectionCheckbox" onchange="CountMenu()">
+                </div>
+                <div class="menuContent">
+                <h2 class="foodname">Vanduo</h2>
+                  <p class="price">1.75 €</p>
+                </div>
+                <div class="menuContentDescr">
+                  <p>H2O</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
+  <script src='./scripts/shoppingCart.js'>
+  </script>
+  <script>
+/*  window.onscroll = function() {myFunction()};
+
+  var header = document.getElementById("pageHeader");
+  var sticky = header.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+  */
+  var itemCount = 0;
+  //  var currentCart = []; // this may be useless
+  //temporary values
+  var restaurant = document.getElementById('restTitle').innerHTML;
+  var foodName = '';
+  var price = 0;
+  var regex = /[+-]?\d+(\.\d+)?/g;
+
+  function CountMenu(){
+    itemCount = 0;
+    cart = [];
+    var items = document.getElementsByClassName('selectionCheckbox');
+    for(var i = 0; i < items.length; i++){
+      if(items[i].checked){
+        itemCount++;
+        foodName = document.getElementsByClassName('foodname')[i].innerHTML;
+        var temp = document.getElementsByClassName('price')[i].innerHTML;
+
+        price = temp.match(regex).map(function(v) { return parseFloat(v); });
+
+        //currentCart.push(new Item(restaurant,foodName, price, 1));
+        addItem(restaurant, foodName, price, 1);
+      }
+    }
+    //testing:
+  /*  for(var i in cart){
+      alert(cart[i].restaurant + " " + cart[i].name + " " + cart[i].price);
+    }
+    alert("Total items: " + totalItems());*/
+    var sum = totalCost();
+    alert(sum);
+    //alert("Total price: " + totalCost());
+    //-------
+    document.getElementById('itemCount').innerHTML = itemCount + ' item(s)';
+  }
+  </script>
+</body>
+</html>
