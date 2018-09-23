@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,48 +49,13 @@
     </ul>
   </div>
 </div>
-<script src='./scripts/shoppingCart.js'>
-</script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src='./scripts/shoppingCart.js'></script>
+<script type="text/javascript" src='./scripts/checkout.js'></script>
 <script>
   loadCart();
-  window.onload = createList();
-
-  function createList(){
-    var ul = document.getElementById("list");
-    var li;
-    alert(cart.length);
-    for(var i in cart){
-      li = document.createElement("li");
-      li.appendChild(document.createTextNode(cart[i].name + " \n " + cart[i].price + " € "));
-      var x = document.createElement("input");
-      x.setAttribute("type", "checkbox");
-      x.setAttribute("class", "check");
-      x.setAttribute("onchange", "recountTotal()");
-      li.appendChild(x);
-      ul.appendChild(li);
-    }
-    li = document.createElement("li");
-    li.setAttribute("id", "totale");
-    li.appendChild(document.createTextNode("Total: " + totalCost() + " €"));
-    ul.appendChild(li);
-
-    xid = document.getElementsByClassName('check');
-    alert(xid.length);
-    for(var i in xid){
-      xid[i].checked = true;
-    }
-  }
-
-  function recountTotal(){
-    var items = document.getElementsByClassName('check');
-    var total = 0;
-    for(var i = 0; i < items.length; i++){
-      if(items[i].checked){
-        total += cart[i].amount * cart[i].price;
-      }
-    }
-    document.getElementById('totale').innerHTML = "Total: " + total + " €";
-  }
+  setCart(cart);
+  window.onload = createList(cart, totalCost());
 </script>
 </body>
 </html>
