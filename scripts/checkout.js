@@ -9,17 +9,30 @@ function createList(cart, totalCost){
   var li;
 //  alert(cart.length);
   for(var i in currCart){
+
     li = document.createElement("li");
-    li.appendChild(document.createTextNode(cart[i].name + " \n " + cart[i].price + " € "));
+    var h3 = document.createElement("h3");
+    var text = document.createTextNode(cart[i].name + " \n " + cart[i].price + " € ")
+    h3.appendChild(text);
+    li.appendChild(h3);
+    var label = document.createElement("label");
+    label.setAttribute("class", "container");
+    var span = document.createElement("span");
+    span.setAttribute("class", "checkmark");
     var x = document.createElement("input");
     x.setAttribute("type", "checkbox");
     x.setAttribute("class", "check");
     x.setAttribute("onchange", "recountTotal()");
-    li.appendChild(x);
+    label.appendChild(x);
+    label.appendChild(span);
+    li.appendChild(label);
+      li.setAttribute("class", "orderElement"); // pervadink kaip noresi
     ul.appendChild(li);
   }
   li = document.createElement("li");
+  li.setAttribute("class", "totalElement") // pervadink kaip noresi
   li.setAttribute("id", "totale");
+
   li.appendChild(document.createTextNode("Total: " + totalCost + " €"));
   ul.appendChild(li);
 
