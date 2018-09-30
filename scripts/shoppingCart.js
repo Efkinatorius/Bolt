@@ -7,7 +7,6 @@ var Item = function(restaurant, name, price, amount) {
 }; // pirkinio objektas su visokiom properties
 
 // FUNKCIJOS:
-
 function addItem(restaurant, name, price, amount){
 	for (var i in cart){
 		if (cart[i].restaurant === restaurant && cart[i].name === name){
@@ -39,6 +38,9 @@ function removeItems(restaurant, name){ // remove visus item (amount = 0)
 function DeleteCart(){
 	cart = [];
 }
+function cartify(newCart){
+	cart = newCart;
+}
 function totalItems(){ // grazina kiek yra is viso itemu
 	var total = 0;
 	for (var i in cart){
@@ -65,7 +67,14 @@ function copyCart(){ // nukopijuoja shopping carta. gal nereikalinga
 	}
 	return cartCopy;
 }
+function saveCart(newcart) {
+	cart = newcart;
+
+	alert("saving cart");
+	localStorage.setItem("shoppingCart", JSON.stringify(cart)); // JS object notation
+}
 function saveCart() {
+
 	localStorage.setItem("shoppingCart", JSON.stringify(cart)); // JS object notation
 }
 function loadCart(){

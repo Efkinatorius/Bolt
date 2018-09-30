@@ -8,7 +8,9 @@
   <link rel = "stylesheet" type="text/css" href="./styles/Reset.css">
   <link rel = "stylesheet" type="text/css" href="./styles/style.css">
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="./scripts/userMan.js"></script>
 <script>
+loadUser();
 var geocoder = new google.maps.Geocoder();
 var userLocation;
  if (navigator.geolocation) {
@@ -34,7 +36,7 @@ function codeLatLng(lat, lng) {
         //formatted address
         //alert(results[0].formatted_address);
         userLocation = results[0].formatted_address;
-        alert(userLocation);
+        //alert(userLocation);
        //find country name
            for (var i=0; i<results[0].address_components.length; i++) {
            for (var b=0;b<results[0].address_components[i].types.length;b++) {
@@ -81,9 +83,8 @@ function hideShowDiv(){
     <div class="row">
       <img class="bolt-img" src="./pics/bolt-logo.png" alt="">
       <ul class="main-nav">
-        <li class=""><a href="">Browse menus</a></li>
-        <li class=""><a href="">Order</a></li>
-        <li class=""><a href="">Cart</a></li>
+        <li class="" id="log"><a href="login.html">Login</a></li>
+        <li class="" id="reg"><a href="">Register</a></li>
       </ul>
     </div>
 <div class="city__container">
@@ -101,6 +102,9 @@ function hideShowDiv(){
       </div>
       <div class="input__container" id="cityDiv" style="display:none">
         <input class="input" type="button" onclick="showCity()" value="Or find your location"></input>
+      </div>
+      <div class"restauLink">
+        <p><a class="Montseratt" href="page1.html">Search for local restaurants.</a></p>
       </div>
     </div>
   </div>

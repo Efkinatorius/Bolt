@@ -26,7 +26,7 @@ function createList(cart, totalCost){
     label.appendChild(x);
     label.appendChild(span);
     li.appendChild(label);
-      li.setAttribute("class", "orderElement"); // pervadink kaip noresi
+    li.setAttribute("class", "orderElement"); // pervadink kaip noresi
     ul.appendChild(li);
   }
   li = document.createElement("li");
@@ -46,11 +46,21 @@ function createList(cart, totalCost){
 function recountTotal(cart){
   var items = document.getElementsByClassName('check');
   var total = 0;
+  var newCart = [];
+  var x = 0;
 //alert(cart[0]);
   for(var i = 0; i < items.length; i++){
     if(items[i].checked){
       total += currCart[i].amount * currCart[i].price;
+      newCart.push(new Item(currCart[i].restaurant, currCart[i].name, currCart[i].price, currCart[i].amount));
     }
   }
+  //alert("deleting cart");
+  //for(var i in newCart) alert(newCart[i].name);
+  DeleteCart();
+  //alert("saving new cart");
+  //for(var i in newCart) alert(newCart[i].name);
+  cartify(newCart);
+  saveCart();
   document.getElementById('totale').innerHTML = "Total: " + total + " €";
 }
