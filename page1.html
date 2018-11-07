@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="Reset.css">
-  <link rel = "stylesheet" type="text/css" href="style1.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./styles/Reset.css">
+  <link rel = "stylesheet" type="text/css" href="./styles/style1.css">
 </head>
 <body>
 <header>
 
   <div class="header" id="pageHeader">
     <div>
-      <a href="#default" class="logo"><img class="bolt-logo" src="bolt-logo.png" alt=""></a>
+      <a href="index.html" class="logo"><img class="bolt-logo" src="./pics/bolt-logo.png" alt=""></a>
     </div>
     <div>
       <input class="input" type="text" placeholder="search" id="search"></input>
-    </div>  
+    </div>
     <div class="header-right_container">
       <ul class="header-right">
-        <li><a href="login.php"  id="log">Log In</a></li>
-      
-        <li><a href="signup.php" id="reg">Sign up</a></li>
-        
+        <li><a href="login.html"  id="log">Login</a></li>
+
+        <li><a href="signup.php" id="reg">Register</a></li>
+
         <li><select id="sel">
           <option>English</option>
           <option>Lithuanian</option>
           <option>Russian</option>
           <option>Polish</option>
         </select></li>
-        
-        <li><a href ="checkout"><img src="SHOPPING_CART.svg" id="cart"></a></li>
+
+        <li><a href ="checkout.html"><img src="./pics/SHOPPING_CART.svg" id="cart"></a></li>
       </ul>
     </div>
   </div>
@@ -60,10 +61,10 @@
             </ul>
             </a>
           </div>
-    </li> 
+    </li>
     <li>
         <div class="restaurant">
-            <a href="">
+            <a href="./page2.html">
 
             <ul class="restaurant_sub_container">
               <li class=image_container>
@@ -103,23 +104,90 @@
             </a>
           </div>
     </li>
+    <li>
+      <div class="restaurant">
+          <a href="">
+
+          <ul class="restaurant_sub_container">
+            <li class=image_container>
+              <div class="image_bg image3">
+
+              </div>
+            </li>
+            <li class="text_container">
+              <h3>Pizzaland</h3>
+            </li>
+            <li class="subtext_container">
+              <h4>Pizza for the whole family</h4>
+              <h4> Price:   €€</h4>
+            </li>
+          </ul>
+          </a>
+        </div>
+  </li>
+  <li>
+    <div class="restaurant">
+        <a href="">
+
+        <ul class="restaurant_sub_container">
+          <li class=image_container>
+            <div class="image_bg image3">
+
+            </div>
+          </li>
+          <li class="text_container">
+            <h3>Pizzaland</h3>
+          </li>
+          <li class="subtext_container">
+            <h4>Pizza for the whole family</h4>
+            <h4> Price:   €€</h4>
+          </li>
+        </ul>
+        </a>
+      </div>
+</li>
+<li>
+  <div class="restaurant">
+      <a href="">
+
+      <ul class="restaurant_sub_container">
+        <li class=image_container>
+          <div class="image_bg image3">
+
+          </div>
+        </li>
+        <li class="text_container">
+          <h3>Pizzaland</h3>
+        </li>
+        <li class="subtext_container">
+          <h4>Pizza for the whole family</h4>
+          <h4> Price:   €€</h4>
+        </li>
+      </ul>
+      </a>
+    </div>
+</li>
     </ul>
 </section>
 <!--
 
-  
+
 -->
+
 <script>
 window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("pageHeader");
+var restaurant_list = document.getElementsByClassName("restaurant_list");
 var sticky = header.offsetTop;
 
 function myFunction() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
+    restaurant_list[0].classList.add("filler");
   } else {
     header.classList.remove("sticky");
+    restaurant_list[0].classList.remove("filler");
   }
 }
 </script>

@@ -1,0 +1,38 @@
+input[type=text], input[type=password]{
+  width: 10rem;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+button{
+  background-color: #5F021F;
+  color:white;
+  padding: 14px 20px;
+  margin:8px 0;
+  border: none;
+  cursor: pointer;
+  width:10rem;
+}
+button:hover{
+  opacity: 0.8;
+}
+.formContainer{
+  padding:16px;
+}
+.loginForm{
+  display: flex;
+  justify-content: center;
+}
+span.pass{
+  float: right;
+  padding-top: 16px;
+}
+@media screen and (max-width: 300px){
+  span.pass{
+    display:flex;
+    float:none;
+  }
+}

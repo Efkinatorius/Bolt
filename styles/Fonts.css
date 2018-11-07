@@ -1,22 +1,22 @@
 @font-face {
     font-family: 'KaushanScript-Regular';
-    src: url(fonts/KaushanScript-Regular.woff);
+    src: url(../Fonts/KaushanScript-Regular.woff);
 }
 @font-face {
     font-family: 'Montseratt';
-    src: url(fonts/Montserrat-Regular.woff);
+    src: url(../Fonts/Montserrat-Regular.woff);
 }
 @font-face {
     font-family: 'Montseratt-bold';
-    src: url(Fonts/Montserrat-Bold.woff);
+    src: url(../Fonts/Montserrat-Bold.woff);
     font-weight: bold;
 }
 @font-face {
     font-family: 'Roboto';
-    src: url(fonts/Roboto-Regular.woff);
+    src: url(../Fonts/Roboto-Regular.woff);
 }
 @font-face {
     font-family: 'Roboto-bold';
-    src: url(Fonts/Roboto-Bold.woff);
+    src: url(../Fonts/Roboto-Bold.woff);
     font-weight: bold;
 }

@@ -1,0 +1,151 @@
+ul#tags li{
+  display:inline;
+  background-color:#2b313d;
+  border-radius: 3px;
+
+}
+
+body, html{
+  height: 100%;
+  background-color: #eeeeee;
+}
+
+.hero-image{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("../restaurantes/Katlerio/KatlerioMain.jpg");
+  
+  height: 50%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:white;
+}
+
+h1, p{
+  font-family: sans-serif;
+}
+
+a:hover{
+  background-color: #657189;
+}
+
+
+.overlay-bar{
+  position: absolute;
+  z-index: 500;
+  bottom: -65px;
+  width: 80%;
+  left: 10%;
+  right: 10%;
+  background: white;
+  border-radius: 4px;
+  padding: 2.5rem 0rem;
+  text-align: center;
+  border: 1px solid;
+}
+.overlay-text{
+  font-size: 26px;
+
+}
+.menu{
+  display:flex;
+  flex-direction: row;
+  margin-top:  100px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.food_card_container{
+}
+.food_categories{
+  width: 55%;
+}
+.food_card{
+
+  height: 120px;
+  display:flex;
+  justify-content: space-between;
+  border: solid 1px black;
+  background: white;
+  margin: 15px 0;
+}
+.food_card_text{
+  display: flex;
+  flex-direction: column;
+}
+.food_card_options{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.image_kebab{
+  background-image: url(../restaurantes/Katlerio/KEBAB.jpg);
+}
+.image_pizza{
+  background-image: url(../restaurantes/pizzaland/MilanoPizza.jpg);
+}
+.image_water{
+  background-image: url(../restaurantes/universalPictures/vando.jpg);
+}
+.image_cola{
+  background-image: url(../restaurantes/universalPictures/pepsi.png);
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+}
+.image_cream{
+  background-image: url(../restaurantes/universalPictures/maskarpones-ledai-71612210.jpg);
+}
+.food_card_image_container{
+  width: 150px;
+  height: 100px;
+  margin: 5px 5px;
+  background-size: cover;
+  background-position: center center;
+  align-self: center;
+}
+.selectionCheckbox{
+  margin-right: 25px;
+}
+.food_card_text h2{
+  font-size: 24px;
+  border-bottom: solid 1px #818181;
+}
+.food_card_text p {
+  color: #818181;
+  margin-top: 10px;
+}
+.food_card_text .price{
+  color:  #5F021F;
+  margin-top: 35px;
+  font-size: 20px;
+}
+.food_head h3{
+  font-size: 32px;
+}
+.contacts{
+  margin-left: 30px;
+  width: 45%;
+}
+.contacts h2{
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.contacts p, .work_hours p{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  
+}
+.work_hours_text{
+  display: flex;
+  justify-content: space-between;
+}

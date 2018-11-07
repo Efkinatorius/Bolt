@@ -66,6 +66,21 @@ header{
   margin: auto;
   text-align: center;
 }
+.city a{
+  color: white;
+  font-size: 24px;
+  margin-top: 5%;
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+}
+.restauLink{
+  width:35%;
+  margin: auto;
+}
+.city a:hover{
+  border:1px solid white;
+}
 .city__container{
   height: 88%;
   width: 100%;
@@ -84,8 +99,11 @@ header{
   justify-content: center;
   align-items: center;
 }
+.Herotext{
+  margin-bottom: 50px;
+}
 .input__container{
-  width: 24%;
+  width: 35%;
 }
 .input{
   text-decoration: none;
@@ -95,6 +113,7 @@ header{
   width: 100%;
   align-self: center;
   margin-top: 15px;
+  font-size:26px;
 }
 .bolt-img{
   height: 70px;

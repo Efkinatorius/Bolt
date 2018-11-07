@@ -1,5 +1,3 @@
-/*Cia as prifuckupinau su search bar'u, sorry :(*/
-
 body {
   margin: 0;
   font-family: sans-serif;
@@ -134,13 +132,13 @@ body {
   background-size: cover;
 }
 .image1{
-  background-image: url(restaurantes/Katlerio/KatlerioMain.jpg);
+  background-image: url(../restaurantes/Katlerio/KatlerioMain.jpg);
 }
 .image2{
-  background-image: url(restaurantes/foxes/FoxesMain.jpg);
+  background-image: url(../restaurantes/foxes/FoxesMain.jpg);
 }
 .image3{
-  background-image: url(restaurantes/pizzaland/PizzalandMain.jpg);
+  background-image: url(../restaurantes/pizzaland/PizzalandMain.jpg);
 }
 .restaurant_sub_container .text_container{
   height: fit-content;
@@ -175,4 +173,73 @@ body {
 a{
   text-decoration: none;
   color: inherit;
+}
+.filler{
+  margin-top: 10vh;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  border: solid 1px #888888;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #5F021F;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }

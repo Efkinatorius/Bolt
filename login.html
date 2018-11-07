@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./styles/Reset.css">
+  <link rel = "stylesheet" type="text/css" href="./styles/style1.css">
+  <link rel = "stylesheet" type="text/css" href="./styles/formStyle.css">
+  <script type = "text/javascript" src="./scripts/userMan.js"></script>
+</head>
+<body>
+<header>
+  <div class="header" id="pageHeader">
+    <div>
+      <a href="index.html" class="logo"><img class="bolt-logo" src="./pics/bolt-logo.png" alt=""></a>
+    </div>
+  </div>
+</header>
+<div class="loginForm">
+  <form > <!--jei bus serveris, reikes pridet signinPage.php kaip action -->
+    <div class="formContainer">
+      <label for="uname"><b>Username</b></label>
+      <input id="uname" type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="pass"><b>Password</b></label>
+      <input id="pass" type="password" placeholder="Enter Password" name="pass" required>
+
+      <button type="submit" onclick="login()">Login</button>
+      <div class="forgFormContainer">
+        <span class="forgPass">Forgot <a href="#"> password? </a></span>
+      </div>
+    </div>
+  </form>
+</div>
+</body>
+</html>
