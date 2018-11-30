@@ -1,0 +1,35 @@
+.formContainer{
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.registerForm{
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+}
+.headingReg{
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.formContainer *{
+    text-align: center;
+    width: 100% !important;
+}
+a.button {
+ 
+    margin: 8px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #5F021F;
+    color:white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    box-sizing: border-box;
+}
