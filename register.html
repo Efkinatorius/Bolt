@@ -18,31 +18,36 @@
   </div>
 </header>
 <div class="registerForm">
-  <form class="formStuff"> <!--jei bus serveris, reikes pridet signinPage.php kaip action -->
+  <form class="formStuff" action="backend\userRegister.php" method="get">
     <div class="formContainer">
       <h1 class="headingReg"> Register an account: </h1>
       <label for="uname"><b>Username</b></label>
-      <input id="uname" type="text" placeholder="Enter Username" name="uname" required>
+      <input id="uname" type="text" placeholder="Enter Username" name="username" required>
 
       <label for="pass"><b>Password</b></label>
-      <input id="pass" type="password" placeholder="Enter Password" name="pass" required>
-     
+      <input id="pass" type="password" placeholder="Enter Password" name="password" required>
+
       <label for="repPass"><b>Repeat Password</b></label>
       <input id="repPass" type="password" placeholder="Enter Password" name="repPass" required>
 
       <label for="email"><b>Email</b></label>
       <input id="email" type="text" placeholder="Enter Email" name="email" required>
 
-      <button type="submit" onclick="register()">Register</button>
-      
+      <button type="submit">Register</button>
+
       <h1 class="headingReg"> Or login: </h1>
       <a href="login.html" class="button">Login</a>
 
-      
+
 
     </div>
 
   </form>
 </div>
 </body>
+<footer>
+  <div class"restrReg">
+    <p><a class="Montseratt" href="registerRestaurant.html">Register your restaurant here!</a></p>
+  </div>
+</footer>
 </html>

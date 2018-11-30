@@ -1,5 +1,5 @@
 <?php
-  function GetData($email)
+  function GetUserData($email)
   {
       $db = mysqli_connect('localhost', 'root', 'root', 'data')
         or die('Could not connect to mySQL server'); // NOTE: adding die() is
@@ -16,12 +16,13 @@
       return $row;
   }
 
-  function SubmitData($username, $password, $email, $accType)
+  function SubmitUserData($username, $password, $email, $accType)
   {
       $db = mysqli_connect('localhost', 'root', 'root', 'data')
         or die('Could not connect to mySQL server');
 
-      $query = "INSERT INTO user VALUES('".$username."','".$password."','".$email."','".$accType."')";
+      $query = "INSERT INTO user VALUES('".$username."','".$password."','".
+        $email."','".$accType."')";
 
       $queryResult = mysqli_query($db, $query);
 
