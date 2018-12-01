@@ -1,6 +1,8 @@
 <?php
-include_once "userDataManager.php";
+session_start();
 include_once "restrDataManager.php";
+include_once "userRegister.php";
+include_once "employeeDataManager.php";
 
 function SendRestaurantRegisterRequest($name, $address, $managerEmail)
 {
@@ -10,6 +12,9 @@ function SendRestaurantRegisterRequest($name, $address, $managerEmail)
     }
 
     $result = SubmitRestrData(0, $name, $address, $managerEmail);
+
+    $row = GetRestrDataByTitle($name);
+    $res = SubmitEmployeeData($managerEmail, "restaurant manager",$row['ID'], 0);
 
     if($result == false)
     {
@@ -21,10 +26,5 @@ function SendRestaurantRegisterRequest($name, $address, $managerEmail)
     }
 }
 
-SendRestaurantRegisterRequest($_GET['restaurant_name'], $_GET['restaurant_address']
-,$_GET['email']);
-
-SendUserRegisterRequest($_GET['username'], $_GET['password'], $_['repPass'],
-'Restaurant Manager');
 
 ?>

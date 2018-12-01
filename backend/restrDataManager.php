@@ -17,6 +17,24 @@
       return $row;
   }
 
+  function GetRestrDataByTitle($title)
+  {
+      $db = mysqli_connect('localhost', 'root', 'root', 'data')
+        or die("Could not connect to database");
+
+      $query = "SELECT * FROM restaurant
+                WHERE Name = '".$title."'";
+
+      mysqli_query($db, $query) or die("Failed querying database");
+
+      $queryResult = mysqli_query($db, $query);
+      $row = mysqli_fetch_array($queryResult);
+
+      mysqli_close($db);
+
+      return $row;
+  }
+
   function SubmitRestrData($id, $name, $address, $managerEmail)
   {
       $db = mysqli_connect('localhost', 'root', 'root', 'data')

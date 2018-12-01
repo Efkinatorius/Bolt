@@ -1,0 +1,255 @@
+<?php
+  session_start();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device width, initial scale=1">
+  <link rel="stylesheet" href="./styles/Reset.css">
+  <link rel = "stylesheet" type="text/css" href="./styles/style1.css">
+  <link rel = "stylesheet" type="text/css" href="./styles/restaurantPageStyle.css">
+</head>
+<body>
+  <header>
+    <div class="header" id="pageHeader">
+      <div>
+        <a href="index.php" class="logo"><img class="bolt-logo" src="./pics/bolt-logo.png" alt=""></a>
+      </div>
+      <div>
+        <input class="input" type="text" placeholder="search" id="search"></input>
+      </div>
+      <div class="header-right_container">
+        <ul class="header-right">
+          <li class="" id="log"><a href="login.php"><?php if($_SESSION['loggedUser'] == 'guest') echo 'Login';
+                                                    else echo ''?></a></li>
+
+          <li class="" id="log"><a href="login.php"><?php if($_SESSION['loggedUser'] == 'guest') echo '';
+                                                    else echo $_SESSION['loggedUser']?></a></li>
+
+          <li class="" id="reg"><a href="register.php"><?php if($_SESSION['loggedUser'] == 'guest') echo 'Register';
+                                                    else echo ''?></a></li>
+
+          <li class="" id="logout"><a href="backend\logoutCall.php"><?php if($_SESSION['loggedUser'] == 'guest') echo '';
+                                                      else echo 'Logout'?></a></li>
+
+          <li><select id="sel">
+            <option>English</option>
+            <option>Lithuanian</option>
+            <option>Russian</option>
+            <option>Polish</option>
+          </select></li>
+
+          <li><a href="checkout.php"><img src="./pics/SHOPPING_CART.svg" id="cart"></a></li>
+          <li><a href="checkout.php" id="itemCount">0 items</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1 style="font-size:5rem" id="restTitle"><?php echo $_SESSION['restaurant_title'];?></h1>
+      <p>€€€€</p>
+      <ul id="tags">
+        <li><a href="menu">Kebabai</a></li>
+        <li><a href="menu">Picos</a></li>
+        <li><a href="menu">Yum!</a></li>
+      </ul>
+    </div>
+    <div class="overlay-bar">
+      <div class="overlay-text">
+        Gourmet kebabų restoranas subalansuotas draugams,
+        pritaikytas bet kuriam paros metui
+      </div>
+      <div class="overlay-fav">
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="menu">
+    <ul class="food_categories">
+      <li class="food_head"><h3>Food</h3></li>
+        <li class="food_card_container">
+            <div class="food_card">
+              <div class="food_card_options">
+                  <input type="checkbox" class="selectionCheckbox" onchange="CountMenu()">
+                  <div class="food_card_text">
+                      <h2 class="foodname">Kebabas</h2>
+                      <p>Skanus kebabas</p>
+                      <p class="price">2.50 €</p>
+                  </div>
+              </div>
+              <div class="food_card_image_container image_kebab">
+
+              </div>
+            </div>
+        </li>
+        <li class="food_card_container">
+            <div class="food_card">
+                <div class="food_card_options">
+                    <input type="checkbox" class="selectionCheckbox" onchange="CountMenu()">
+                    <div class="food_card_text">
+                        <h2 class="foodname">Pica</h2>
+                        <p>Skani pica</p>
+                        <p class="price">7.50 €</p>
+                    </div>
+                </div>
+                <div class="food_card_image_container image_pizza">
+
+                </div>
+              </div>
+        </li>
+      <li class="food_head"><h3>Desserts</h3></li>
+        <li class="food_card_container">
+            <div class="food_card">
+                <div class="food_card_options">
+                    <input type="checkbox" class="selectionCheckbox" onchange="CountMenu()">
+                    <div class="food_card_text">
+                        <h2 class="foodname">Kebabas su šokoladu</h2>
+                        <p>Skanus kebabas</p>
+                        <p class="price">1.75 €</p>
+                    </div>
+                </div>
+                <div class="food_card_image_container image_kebab">
+
+                </div>
+              </div>
+        </li>
+        <li class="food_card_container">
+            <div class="food_card">
+                <div class="food_card_options">
+                    <input type="checkbox" class="selectionCheckbox" onchange="CountMenu()">
+                    <div class="food_card_text">
+                        <h2 class="foodname">Ledai</h2>
+                        <p>Skanūs ledai</p>
+                        <p class="price">1.50 €</p>
+                    </div>
+                </div>
+                <div class="food_card_image_container image_cream">
+
+                </div>
+              </div>
+        </li>
+      <li class="food_head"><h3>Drinks</h3></li>
+        <li class="food_card_container">
+            <div class="food_card">
+                <div class="food_card_options">
+                    <input type="checkbox" class="selectionCheckbox" onchange="CountMenu()">
+                    <div class="food_card_text">
+                        <h2 class="foodname">Pepsi</h2>
+                        <p>Skanus pepsi</p>
+                        <p class="price">1.20 €</p>
+                    </div>
+                </div>
+                <div class="food_card_image_container image_cola">
+
+                </div>
+              </div>
+        </li>
+        <li class="food_card_container">
+            <div class="food_card">
+                <div class="food_card_options">
+                    <input type="checkbox" class="selectionCheckbox" onchange="CountMenu()">
+                    <div class="food_card_text">
+                        <h2 class="foodname">Vanduo</h2>
+                        <p>Skanus vando</p>
+                        <p class="price">2.00 €</p>
+                    </div>
+                </div>
+                <div class="food_card_image_container image_water">
+
+                </div>
+              </div>
+        </li>
+    </ul>
+    <ul class="contacts">
+      <li class="adress">
+        <h2>Adress</h2>
+        <p>Gatvių 24</p>
+        <p>01130, Vilnius</p>
+      </li>
+      <li class="work_hours">
+        <h2>Work hours</h2>
+        <div class="work_hours_text">
+          <p>Monday - Wednesday</p>
+          <p>12.30 - 22.30</p>
+        </div>
+        <div class="work_hours_text">
+          <p>Thursday - Friday</p>
+          <p>11.30 - 23.30</p>
+        </div>
+        <div class="work_hours_text">
+          <p>Saturday</p>
+          <p>14.30 - 24.00</p>
+        </div>
+        <div class="work_hours_text">
+          <p>Sunday</p>
+          <p>Closed</p>
+        </div>
+
+      </li>
+    </ul>
+  </div>
+  <script src='./scripts/shoppingCart.js'>
+  </script>
+  <script src=""></script>
+  <script>
+  window.onscroll = function() {myFunction()};
+  var hero = document.getElementsByClassName("hero-image");
+  var header = document.getElementById("pageHeader");
+  var sticky = header.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      hero[0].classList.add("filler");
+      header.classList.add("sticky");
+    } else {
+      hero[0].classList.remove("filler");
+      header.classList.remove("sticky");
+    }
+  }
+
+  var itemCount = 0;
+  //  var currentCart = []; // this may be useless
+  //temporary values
+  var restaurant = document.getElementById('restTitle').innerHTML;
+  var foodName = '';
+  var price = 0;
+  var regex = /[+-]?\d+(\.\d+)?/g;
+
+  function CountMenu(){
+    itemCount = 0;
+    DeleteCart();
+    var items = document.getElementsByClassName('selectionCheckbox');
+    for(var i = 0; i < items.length; i++){
+      if(items[i].checked){
+        itemCount++;
+        foodName = document.getElementsByClassName('foodname')[i].innerHTML;
+        var temp = document.getElementsByClassName('price')[i].innerHTML;
+
+        price = temp.match(regex).map(function(v) { return parseFloat(v); });
+
+        //currentCart.push(new Item(restaurant,foodName, price, 1));
+        addItem(restaurant, foodName, price, 1);
+      }
+    }
+    //testing:
+  /*  for(var i in cart){
+      alert(cart[i].restaurant + " " + cart[i].name + " " + cart[i].price);
+    }*/
+    /*alert(cart[0].price);
+    alert("Total items: " + totalItems());
+    var sum = totalCost();
+    alert(sum);*/
+    //alert("Total price: " + totalCost());
+    //-------
+    document.getElementById('itemCount').innerHTML = itemCount + ' item(s)';
+    saveCart();
+
+  }
+  </script>
+</body>
+</html>

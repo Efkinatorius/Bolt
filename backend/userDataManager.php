@@ -1,4 +1,5 @@
 <?php
+  //session_start();
   function GetUserData($email)
   {
       $db = mysqli_connect('localhost', 'root', 'root', 'data')

@@ -1,24 +1,26 @@
 <?php
+  session_start();
+  include_once "userDataManager.php";
   function SendLoginRequest($email, $password)
   {
       include_once 'userDataManager.php';
 
-      $acc = GetData($email);
+      $acc = GetUserData($email);
 
       if($acc['Email'] == NULL)
       {
-          die('No account with such email was found');
+          $_SESSION['message'] = 'No account with such email was found';
       }
 
       if(password_verify($password, $acc['Password']))
       {
-          die("You have logged on!");
+          $_SESSION['message'] = "You have logged on!";
+          $_SESSION['loggedUser'] = $acc['Username'];
+          $_SESSION['loggedUserEmail'] = $acc['Email'];
       }
       else
       {
-          die("Wrong password!");
+          $_SESSION['message'] = "Wrong password!";
       }
   }
-
-  SendLoginRequest($_GET['email'],$_GET['password']);
 ?>

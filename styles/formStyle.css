@@ -36,3 +36,7 @@ span.pass{
     float:none;
   }
 }
+.error
+{
+  color:red;
+}

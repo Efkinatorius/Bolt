@@ -1,4 +1,5 @@
 var cart = [];   //objektu masyvas
+var cartJSON;
 var Item = function(restaurant, name, price, amount) {
 	this.restaurant = restaurant;
 	this.name = name;
@@ -76,6 +77,8 @@ function saveCart(newcart) {
 function saveCart() {
 
 	localStorage.setItem("shoppingCart", JSON.stringify(cart)); // JS object notation
+
+	cartJSON = JSON.stringify(cart);
 }
 function loadCart(){
 	cart = JSON.parse(localStorage.getItem("shoppingCart"));

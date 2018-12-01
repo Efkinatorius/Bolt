@@ -1,5 +1,6 @@
 //pass the cart to this script
 var currCart = [];
+var currCartJSON;
 function setCart(cart){
   currCart = cart;
 }
@@ -62,5 +63,6 @@ function recountTotal(cart){
   //for(var i in newCart) alert(newCart[i].name);
   cartify(newCart);
   saveCart();
+
   document.getElementById('totale').innerHTML = "Total: " + total + " €";
 }

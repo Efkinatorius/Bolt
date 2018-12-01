@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,12 +16,12 @@
 <header>
   <div class="header" id="pageHeader">
     <div>
-      <a href="index.html" class="logo"><img class="bolt-logo" src="./pics/bolt-logo.png" alt=""></a>
+      <a href="index.php" class="logo"><img class="bolt-logo" src="./pics/bolt-logo.png" alt=""></a>
     </div>
   </div>
 </header>
 <div class="registerForm">
-  <form class="formStuff" action="backend\restrRegister.php" method="get">
+  <form class="formStuff" action="backend\restrRegisterCall.php" method="get">
     <div class="formContainer">
       <h1 class="headingReg"> Register your restaurant: </h1>
       <label for="uname"><b>Username</b></label>

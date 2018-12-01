@@ -41,10 +41,11 @@
             }
             else
             {
-                die("An account has been created successfully!");
+              //NOTE: remove die() for god sake
+              //die("An account has been created successfully!");
+              //return true;
+
             }
         }
     }
-
-    SendUserRegisterRequest($_GET['username'], $_GET['password'],$_GET['repPass'],$_GET['email'],'client');
 ?>

@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,12 +16,12 @@
 <header>
   <div class="header" id="pageHeader">
     <div>
-      <a href="index.html" class="logo"><img class="bolt-logo" src="./pics/bolt-logo.png" alt=""></a>
+      <a href="index.php" class="logo"><img class="bolt-logo" src="./pics/bolt-logo.png" alt=""></a>
     </div>
   </div>
 </header>
 <div class="registerForm">
-  <form class="formStuff" action="backend\userRegister.php" method="get">
+  <form class="formStuff" action="backend\userRegisterCall.php" method="get">
     <div class="formContainer">
       <h1 class="headingReg"> Register an account: </h1>
       <label for="uname"><b>Username</b></label>
@@ -33,10 +36,11 @@
       <label for="email"><b>Email</b></label>
       <input id="email" type="text" placeholder="Enter Email" name="email" required>
 
+
       <button type="submit">Register</button>
 
       <h1 class="headingReg"> Or login: </h1>
-      <a href="login.html" class="button">Login</a>
+      <a href="login.php" class="button">Login</a>
 
 
 
@@ -47,7 +51,7 @@
 </body>
 <footer>
   <div class"restrReg">
-    <p><a class="Montseratt" href="registerRestaurant.html">Register your restaurant here!</a></p>
+    <p><a class="Montseratt" href="registerRestaurant.php">Register your restaurant here!</a></p>
   </div>
 </footer>
 </html>
