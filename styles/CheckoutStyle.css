@@ -75,6 +75,7 @@ body{
 .OrderCounter{
   padding: 10px 10px;
   border-radius: 25px;
+  margin-top: 5px;
   border: 2px solid #888888;
   background-color: #fff;
 }
@@ -145,4 +146,9 @@ body{
   margin-top: 30px;
   margin-bottom: 10px;
   background-color: #5F021F;
+}
+.line{
+  border: solid 0.5px #5F021F;
+  height: 0px;
+  margin-bottom: 10px;
 }
