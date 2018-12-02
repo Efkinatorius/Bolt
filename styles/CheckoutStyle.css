@@ -147,8 +147,8 @@ body{
   margin-bottom: 10px;
   background-color: #5F021F;
 }
-.line{
-  border: solid 0.5px #5F021F;
-  height: 0px;
+.line_other{
+  border-bottom: solid 1px #5F021F;
+  height: 1px;
   margin-bottom: 10px;
 }
